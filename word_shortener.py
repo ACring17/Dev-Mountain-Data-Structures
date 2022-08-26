@@ -93,3 +93,21 @@ class LinkedList(object):
             current = current.next
 
         return length
+
+
+def shorten_word(words):
+    new_list = words[1:]
+
+    new_ll = LinkedList()
+
+    for i in new_list:
+        new_ll.append(i)
+
+    return new_ll
+
+
+test_list = ["Red", "Blue", "Green", "Orange", "Pink", "Brown"]
+
+my_ll = shorten_word(test_list)
+
+print(my_ll.get_length())
