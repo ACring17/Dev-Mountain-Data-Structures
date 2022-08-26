@@ -83,3 +83,28 @@ class Stack():
 
         return not bool(self._list)
 
+    def double_pop(self):
+        """Takes last two items and returns them in order as two separate values."""
+
+        thing1 = self.__list.pop()
+        thing2 = self.__list.pop()
+
+        return thing2, thing1
+
+def make_short_stack(list):
+    my_stack = Stack()
+
+    for i in list:
+        my_stack.push(i)
+
+    return my_stack
+
+test_list = ["Vanilla", "Chocolate", "Strawberry"]
+
+short_stack = make_short_stack(test_list)
+
+print(short_stack)
+
+print(short_stack.double_pop())
+
+print(short_stack)
