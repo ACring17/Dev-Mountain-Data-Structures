@@ -105,9 +105,11 @@ def shorten_word(words):
 
     return new_ll
 
-
+#Testing linked list with colors
 test_list = ["Red", "Blue", "Green", "Orange", "Pink", "Brown"]
 
+#Testing the shorten word function
 my_ll = shorten_word(test_list)
 
+#Printing the get_length method to see if it shortened the list.
 print(my_ll.get_length())
