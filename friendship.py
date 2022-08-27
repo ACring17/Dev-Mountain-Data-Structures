@@ -73,6 +73,18 @@ class FriendGraph():
         for friend in self.nodes:
             print(friend.name)
 
+def make_simple_friendship(friend1, friend2, friend3):
+    friend1 = Node(f"{friend1}")
+    friend2 = Node(f"{friend2}")
+    friend3 = Node(f"{friend3}")
+
+    friends = FriendGraph()
+    friends.add_people([friend1, friend2, friend3])
+
+    friends.set_friends(friend1, friend2)
+    friends.set_friends(friend1, friend3)
+    friends.set_friends(friend2, friend3)
+
 
 andrew = Node("Andrew")
 ben = Node("Ben")
